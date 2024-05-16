@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5488/db
+    username: user
+    password: pass
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database: postgresql
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/changelog-master.xml
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: pass
+
+server:
+  port: 8095
+  servlet:
+    context-path: /api/v1
+
+logging:
+  level:
+    '[org.springframework.web]': info
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+rabbit:
+  queue:
+    transaction: queue
+
+

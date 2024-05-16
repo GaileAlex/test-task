@@ -1,0 +1,23 @@
+spring:
+  liquibase:
+    enabled: true
+    change-log: classpath:/changelog/changelog-master.xml
+
+server:
+  port: 8095
+  servlet:
+    context-path: /api/v1
+
+logging:
+  level:
+    '[org.springframework.web]': info
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+rabbit:
+  queue:
+    transaction: queue
+
+

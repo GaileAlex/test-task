@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:15.3
+    container_name: test_task_dev
+    ports:
+      - 5488:5432
+    environment:
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_USER=user
+      - POSTGRES_DB=db
+    restart: unless-stopped
+    volumes:
+      - test-task-dev-data:/var/lib/postgresql/data:rw
+
+  rabbitmq:
+    image: rabbitmq:3.9.29
+    container_name: rabbit_dev
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      - RABBITMQ_DEFAULT_USER=user
+      - RABBITMQ_DEFAULT_PASS=pass
+    restart: unless-stopped
+
+volumes:
+  test-task-dev-data:
