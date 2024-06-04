@@ -8,7 +8,7 @@ import org.testcontainers.containers.PostgreSQLContainer;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class DbContainer {
-    static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:16.1-alpine3.18");
+    static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:15.3");
 
     @BeforeAll
     static void beforeAll() {
