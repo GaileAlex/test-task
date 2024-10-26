@@ -1,12 +1,3 @@
-## Introduction
-
-Test task
-
-Due to the fact that I didn’t really understand the phrase in the test task
-“Account service keeps track of accounts, their balances, and transactions.”,
-but it was interesting to implement tracking and storage of all user requests,
-then all account requests and all actions with balances are recorded into the database.
-You can check this data in the TraceRequestController controller, get all requests, or by request ID
 
 ## Prerequisites
 
